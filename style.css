@@ -336,10 +336,7 @@
   /**
    * Add the correct display in IE 10+.
    */
-html{
-    scroll-behavior: smooth;
-    transition-timing-function: ease-in-out 3s;
-  }
+
   
   body{
       font-family: fantasy!important;
