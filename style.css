@@ -339,7 +339,7 @@
 
   
   body{
-      font-family: fantasy!important;
+      font-family: Arial, Helvetica, sans-serif;
     background-color:#FFB8EE;
     background-image: linear-gradient(135deg,#FFB8EE 30%, #c7e1ffe7 60%);  
   }
@@ -448,11 +448,35 @@ nav ul li a{
   color: skyblue;
 }
 
+ul{
+}
+
+ul li{
+  list-style-type: square;
+  display: flex;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  width: 631px;
+  height: 624px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
 
   @media screen and (max-width: 400px) {
     .navbar a {
       float: center;
       width: 100%;
     }
+
 
 
