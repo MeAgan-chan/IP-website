@@ -28,6 +28,7 @@ $(document).ready(function () {
     let famNum = $("#fam-Num").val();
     let childAge = $("#child-Age").val();
     let adoptReason = $("#adopt-Reason").val();
+    let existingPets = $("#existingPets").val();
 
     //[STEP 3]: get form values when user clicks on send
     //Adapted from restdb api

@@ -358,12 +358,15 @@
   
   h2, h3, h5, h6{
     color:azure;
+    text-align:centre;
+    
     
   }
   bv 
   h4, h1{
     color:white;
     font-family: 'M PLUS Rounded 1c', sans-serif;
+    text-align: centre;
   }
   
   /* Header/logo Title */

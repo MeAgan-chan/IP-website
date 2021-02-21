@@ -49,11 +49,37 @@
             <input type="text" id="fam-Num" class="form-control" required>
             </textarea>
           </div>
-
             <div class="form-group">
 					  <label for="child-Age">How many of them are children? State their ages if any.</label>
             <input type="text" id="child-Age" class="form-control" required>
           </div>
+
+          <div class="form-group">
+           <form action="/action_page.php">
+           <label for="existing-Pets">
+             <p>Do you own any existing pets?</p>
+           </label>
+           <input type="radio" id="yes" name="option" value="yes">
+           <label for="yes">Yes</label><br>
+           <input type="radio" id="no" name="option" value="no">
+           <label for="no">No</label><br>
+           </form>
+          </div>
+
+          <div class="form-group">
+					  <label for="household-Type">Please describe the household your pet is suitable in:</label>
+            <input type="checkbox" id="active" name="active" value="active">
+            <label for="active">Active</label><br>
+
+            <input type="checkbox" id="Calm" name="Calm" value="Calm">
+            <label for="no">Calm</label><br>
+
+            <input type="checkbox" id="Quiet" name="Quiet" value="Quiet">
+            <label for="yes">Quiet</label><br>
+
+            <input type="checkbox" id="Noisy" name="Noisy" value="Noisy">
+            <label for="no">Noisy</label><br>
+          <div>
 
 
   
