@@ -63,5 +63,6 @@ For any scenarios that have not been automated, test the user stories manually a
 -[w3schools](https://www.w3schools.com/)
     -The project has used w3schools as a reference for some of its displays
 ### Media
+Github Link: https://github.com/MeAgan-chan/IP-website
 
 ### Acknowledgements
