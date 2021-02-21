@@ -456,6 +456,17 @@ ul li{
   display: flex;
 }
 
+.breedNav{
+  padding:0;
+  border: none;
+  background: none;
+  color: skyblue;
+  text-decoration: none;
+}
+a {
+  color: inherit;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: nowrap;

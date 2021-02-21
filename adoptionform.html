@@ -26,7 +26,7 @@
             <a href="pc-nav.html">Pet Care</a>
     </button></li>
     <li><button class="buttonNav">
-            <a href="adoption.html">Adoption</a>
+            <a href="adoption-nav.html">Adoption</a>
     </button></li>
     </ul>
     </nav>
@@ -72,68 +72,7 @@
     </div>
   </div><!-- end add container --> 
 
-  <div class="container mt-5">
-    <h2>Table information of Contacts (<span id="total-contacts"></span>)</h2>
-    <table class="table" id="contact-list">
-      <thead>
-        <th>Name</th>
-        <th>Student ID</th>
-        <th>Student Class</th>
-        <th>Email</th>
-        <th>Student Mentor</th>
-        <th>Student CCA</th>
-        <th colspan="2">Actions</th>
-        
-      </thead>
-      <!-- This will be filled with information later -->
-      <tbody></tbody>
-    </table>
-  </div>
   
-  <div class="container mt-5" id="update-contact-container"> 
-    <div id="add-update-msg">
-			<div class="alert alert-success" role="alert">
-				Contact record updated sucessfully
-			</div>
-		</div>
-    <h4>Update Contact</h4>
-    <div class="form" id="update-contact">
-			<form id="update-contact-form">
-				<div class="form-group">
-					<label for="update-contact-Name">Name</label>
-          <input type="text" id="update-contact-name" class="form-control" required>
-          </div>
-
-          <div class="form-group">
-          <label for="update-contact-ID">Student ID</label>
-          <input type="text" id="update-contact-ID" class="form-control" required>
-          <input type="hidden" id="update-contact-id">
-          </div>
-
-          <div class="form-group">
-					<label for="update-contact-class">Student Class</label>
-          <input type="text" id="update-contact-class" class="form-control" required>
-          </div>
-
-          <div class="form-group">
-          <label for="update-contact-email">Email</label>
-          <input type="email" id="update-contact-email" class="form-control" required>
-           <small id="update-contact-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
-          </div>
-
-          <div class="form-group">
-					<label for="update-contact-Mentor">Student Mentor</label>
-          <input type="text" id="update-contact-mentor" class="form-control" required>
-          </div>
-
-          <div class="form-group">
-					<label for="update-contact-cca">Student CCA</label>
-          <input type="text" id="update-contact-cca" class="form-control" required>
-          </div>
-
-          <input type="submit" value="Update Contact Details" class="btn btn-warning" id="update-contact-submit">
-        </form>
-    </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
