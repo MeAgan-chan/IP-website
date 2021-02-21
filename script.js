@@ -1,7 +1,7 @@
 //[STEP 0]: Make sure our document is A-OK
 $(document).ready(function () {
   //what kind of interface we want at the start 
-  const APIKEY = "5ffd8c4a1346a1524ff12929";
+  const APIKEY = "603290905ad3610fb5bb6483";
   getContacts();
   $("#update-contact-container").hide();
   $("#add-update-msg").hide();
@@ -16,9 +16,14 @@ $(document).ready(function () {
     let petName = $("#pet-Name").val();
     let petType = $("#pet-Type").val();
     let petBreed = $("#pet-Breed").val();
+    let petSex = $("#pet-Sex").val();
     let petAge = $("#pet-Age").val();
     let rehomeReason = $("rehome-Reason").val();
+    let multPets = $("#mult-Pets").val();
     let addCharac = $("#add-Charac").val();
+    let withChildren = $("#with-Children").val();
+    let householdType = $("#household-Type").val();
+    let petPic = $("#pet-Pic").val();
     //adopting form
     let famNum = $("#fam-Num").val();
     let childAge = $("#child-Age").val();
@@ -33,7 +38,11 @@ $(document).ready(function () {
       "Breed": petBreed,
       "give your pet away": rehomeReason,
       "other characteristics": addCharac,
+      "work with children": withChildren,
+      "household": householdType,
+      "Upload Photo": petPic,
       //adopting form
+      }
       
     };
 
@@ -137,45 +146,8 @@ $(document).ready(function () {
 
   }
 
-  //[STEP 10]: Create our update listener
-  //here we tap onto our previous table when we click on update
-  //this is a delegation feature of jquery
-  //because our content is dynamic in nature, we listen in on the main container which is "#contact-list". For each row we have a class .update to help us
-  $("#contact-list").on("click", ".update", function (e) {
-    e.preventDefault();
-    //update our update form values
-    let contactName = $(this).data("name");
-    let contactEmail = $(this).data("email");
-    let contactCCA = $(this).data("cca");
-    let contactID = $(this).data("id");
-    let contactMentor = $(this).data("mentor");
-    let contactClass = $(this).data("class");
-    console.log($(this).data("msg"));
 
-    //[STEP 11]: Load in our data from the selected row and add it to our update contact form 
-    $("#update-contact-name").val(contactname);
-    $("#update-contact-email").val(contactemail);
-    $("#update-contact-cca").val(contactcca);
-    $("#update-contact-id").val(contactid);
-    $("#update-contact-mentor").val(contactmentor);
-    $("#update-contact-class").val(contactclass);
-    $("#update-contact-container").show();
 
-  });//end contact-list listener for update function
-
-  //[STEP 12]: Here we load in our contact form data
-  //Update form listener
-  $("#update-contact-submit").on("click", function (e) {
-    e.preventDefault();
-    //retrieve all my update form values
-    let contactName = $("#update-contact-name").val();
-    let contactEmail = $("#update-contact-email").val();
-    let contactClass = $("#update-contact-class").val();
-    let contactID = $("#update-contact-id").val();
-    let contactCCA = $("#update-contact-cca").val();
-    let contactMentor = $("#update-contact-mentor").val();
-    console.log($("#update-contact-msg").val());
-    console.log(contactMsg);
 
     //[STEP 12a]: We call our update form function which makes an AJAX call to our RESTDB to update the selected information
     updateForm(contactid, contactname, contactemail, contactclass, contactcca, contactmentor);
@@ -186,17 +158,21 @@ $(document).ready(function () {
   function updateForm(contactid, contactname, contactemail, contactclass, contactcca, contactmentor) {
     //@TODO create validation methods for id etc. 
 
-    var jsondata = { "name": contactName,
-      "email": contactEmail,
-      "id": contactID,
-      "cca": contactCCA,
-      "class": contactClass,
-      "mentor": contactMentor, };
+    var jsondata = { "pet name": petName,
+      "pet breed": petBreed,
+      "pet sex": petSex,
+      "pet age": petAge,
+      "explanation": rehomeReason,
+      "multiple pets": multPets,
+      "work with children":withChildren,
+      "household":householdType,
+      "any other characteristics":addCharac,
+      "picture of pet":petPic };
 
     var settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://interactivedev-bed4.restdb.io/rest/contact/(ObjectID)",
+    "url": "https://ipdata-3f46.restdb.io/rest/rehoming-form",
     "method": "DELETE",
     "headers": {
       "content-type": "application/json",

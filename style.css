@@ -351,13 +351,13 @@
   }
   
   p{
-    color:pink;
+    color:black;
     
   }
   
   
   h2, h3, h5, h6{
-    color:pink;
+    color:azure;
     
   }
   bv 
@@ -466,6 +466,12 @@ ul li{
 a {
   color: inherit;
 }
+.AkitaNav{
+  padding:0;
+  border: none;
+  background: none;
+  text-decoration: none;
+}
 
 .flex-container {
   display: flex;
@@ -483,11 +489,10 @@ a {
 }
 
 
-  @media screen and (max-width: 400px) {
-    .navbar a {
-      float: center;
-      width: 100%;
-    }
+@media (max-width: 250px) {
+  .flex-container {
+    flex-direction: column;
+  }
 
 
 
