@@ -25,6 +25,7 @@ Pet breed, pet care, adoption/rehoming.
 -Different pet breeds for cats and dogs.
 -Pet care
 
+
 ### Features Left to Implement
 - The rest of the description for animals other than the Akita.
 
@@ -56,7 +57,7 @@ For any scenarios that have not been automated, test the user stories manually a
 
 
 
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
+
 
 ## Credits
 -[w3schools](https://www.w3schools.com/)
